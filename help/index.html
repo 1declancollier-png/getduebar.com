@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>duebar — Help</title>
+<meta name="description" content="How to connect your Canvas calendar to duebar, and what to do if something looks wrong.">
+<meta name="theme-color" content="#0c0b0a">
+<link rel="icon" href="../icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  :root { --bg:#0c0b0a; --fg:#f3efe7; --fg-70:rgba(243,239,231,.72); --fg-45:rgba(243,239,231,.45); --line:rgba(243,239,231,.12); --card:rgba(243,239,231,.06);
+    --warn-bg:rgba(251,191,36,.08); --warn-fg:#fbd784; --warn-rule:rgba(251,191,36,.35); --pad:clamp(20px,4vw,56px); }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font-family:"Bricolage Grotesque","Helvetica Neue",Helvetica,Arial,sans-serif; font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  a { color:var(--fg); text-decoration:underline; text-decoration-color:rgba(243,239,231,.35); text-underline-offset:3px; } a:hover { color:#fff; text-decoration-color:#fff; }
+  .mono { font-family:"JetBrains Mono","SF Mono",Menlo,monospace; }
+  nav { display:flex; align-items:center; justify-content:space-between; padding:28px var(--pad) 0; max-width:1440px; margin:0 auto; }
+  .brand { display:flex; align-items:center; gap:12px; font-weight:700; font-size:19px; letter-spacing:-0.02em; text-decoration:none; }
+  .brand img { width:28px; height:28px; border-radius:7px; display:block; }
+  nav .links { display:flex; align-items:center; gap:28px; }
+  nav .links a { font-size:15px; color:var(--fg-70); text-decoration:none; }
+  nav .links a.pill { display:inline-flex; align-items:center; height:40px; padding:0 18px; border-radius:999px; border:1px solid rgba(243,239,231,.25); font-size:14px; font-weight:600; color:var(--fg); }
+  nav .links a.pill:hover { border-color:rgba(243,239,231,.6); }
+  .hero { max-width:760px; margin:0 auto; padding:clamp(56px,8vw,110px) var(--pad) 0; }
+  .eyebrow { font-family:"JetBrains Mono",Menlo,monospace; font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--fg-45); }
+  h1 { margin:18px 0 0; font-size:clamp(40px,6vw,76px); line-height:.98; font-weight:500; letter-spacing:-0.04em; text-wrap:balance; }
+  .hero p { margin:20px 0 0; font-size:20px; color:var(--fg-70); max-width:540px; text-wrap:pretty; }
+  .toc { display:flex; flex-wrap:wrap; gap:10px; margin-top:32px; }
+  .toc a { font-size:14px; text-decoration:none; padding:8px 14px; border-radius:999px; border:1px solid rgba(243,239,231,.18); color:var(--fg-70); }
+  .toc a:hover { border-color:rgba(243,239,231,.5); color:#fff; }
+  .wrap { max-width:760px; margin:0 auto; padding:24px var(--pad) 96px; }
+  h2 { font-size:clamp(28px,3.2vw,40px); line-height:1.05; letter-spacing:-0.03em; font-weight:500; margin:72px 0 18px; padding-top:32px; border-top:1px solid var(--line); scroll-margin-top:24px; }
+  h3 { font-size:22px; letter-spacing:-0.02em; font-weight:600; margin:40px 0 10px; }
+  p { color:var(--fg-70); } p strong { color:var(--fg); font-weight:600; } em { color:var(--fg); }
+  ol, ul { padding-left:1.4rem; color:var(--fg-70); } li { margin:.55rem 0; } li strong { color:var(--fg); }
+  code, .url { font-family:"JetBrains Mono",Menlo,monospace; font-size:.85em; background:var(--card); padding:.15em .45em; border-radius:6px; color:var(--fg); }
+  .url { display:block; padding:.9rem 1.1rem; overflow-wrap:anywhere; margin:1rem 0; border:1px solid var(--line); border-radius:12px; }
+  .note { background:var(--warn-bg); color:var(--warn-fg); border:1px solid var(--warn-rule); border-radius:14px; padding:1.1rem 1.3rem; margin:1.6rem 0; }
+  .note strong { color:#fff; }
+  .q { font-weight:600; color:var(--fg); font-size:19px; letter-spacing:-0.015em; margin:2rem 0 .3rem; }
+  .q + p { margin-top:0; }
+  table { border-collapse:collapse; width:100%; margin:1rem 0; }
+  th, td { text-align:left; padding:.75rem .5rem; border-bottom:1px solid var(--line); color:var(--fg-70); }
+  th { font-weight:600; color:var(--fg); font-size:14px; letter-spacing:.04em; text-transform:uppercase; }
+  td:first-child { color:var(--fg); font-weight:500; }
+  .dot { display:inline-block; width:.6em; height:.6em; border-radius:50%; margin-right:.6em; }
+  footer { margin-top:80px; padding-top:28px; border-top:1px solid var(--line); color:var(--fg-45); font-size:15px; }
+  @media (max-width:600px) { nav .links a:not(.pill) { display:none; } }
+</style>
+</head>
+<body>
+<nav>
+  <a class="brand" href="../"><img src="../icon.png" alt=""><span>duebar</span></a>
+  <div class="links">
+    <a href="../#how">How it works</a>
+    <!-- REPLACE with your Whop checkout link -->
+    <a class="pill" href="../#buy">Get it — $4.99</a>
+  </div>
+</nav>
+<div class="hero">
+  <div class="eyebrow">Help</div>
+  <h1>Connect your calendar, and fix what looks wrong.</h1>
+  <p>Everything here takes about a minute. If it doesn't, email me — the address is at the bottom.</p>
+  <div class="toc">
+    <a href="#setup">Connect Canvas</a><a href="#colours">Colours &amp; numbers</a><a href="#problems">Something looks wrong</a><a href="#privacy">Privacy</a><a href="#requirements">Requirements</a>
+  </div>
+</div>
+
+<div class="wrap">
+
+<h2 id="setup">Connect your Canvas calendar</h2>
+
+<p>duebar reads a link Canvas gives you called a <strong>calendar feed</strong>. It lists
+everything you have due. You don't log in to anything, and you don't need permission from
+your school.</p>
+
+<ol>
+  <li>Open Canvas in your browser, the way you normally do.</li>
+  <li>Click <strong>Calendar</strong> in the menu down the left-hand side.</li>
+  <li>Scroll to the bottom of the right-hand column and click <strong>Calendar Feed</strong>.</li>
+  <li>A box appears with a long link in it. Click the link once to select all of it, then copy it
+      (<code>⌘C</code>).</li>
+  <li>In duebar, click the menu bar item, then <strong>Settings…</strong>, and paste the link into
+      the box. Click <strong>Add</strong>.</li>
+</ol>
+
+<p>If it worked, duebar says something like <em>"Found 14 upcoming assignments."</em> and your next
+deadline shows up in the menu bar within a few seconds.</p>
+
+<p>The link looks roughly like this:</p>
+<div class="url">https://yourschool.instructure.com/feeds/calendars/user_a1b2c3d4e5f6….ics</div>
+
+<div class="note">
+  <strong>Keep that link private.</strong> Anyone who has it can see everything you have due.
+  duebar stores it in your Mac's Keychain — the same place your saved passwords live — and never in
+  a plain file. If you think someone else has it, go back to <strong>Calendar → Calendar Feed</strong>
+  in Canvas and click <strong>Reset</strong>. The old link stops working straight away; paste the new
+  one into duebar.
+</div>
+
+<h3>Using Google Classroom instead?</h3>
+
+<p>duebar takes any calendar link, not only Canvas ones.</p>
+
+<ol>
+  <li>Open <a href="https://calendar.google.com">Google Calendar</a>.</li>
+  <li>Hover over your class calendar in the left-hand list, click the <strong>⋮</strong> beside it,
+      and choose <strong>Settings and sharing</strong>.</li>
+  <li>Scroll down to <strong>Integrate calendar</strong>.</li>
+  <li>Copy the <strong>Secret address in iCal format</strong>.</li>
+  <li>Paste it into duebar the same way.</li>
+</ol>
+
+<p>You can add more than one link. duebar merges them into a single list, and if the same assignment
+turns up in two of them it only appears once.</p>
+
+<h2 id="colours">What the colours and numbers mean</h2>
+
+<table>
+  <tr><th>Colour</th><th>Means</th></tr>
+  <tr><td><span class="dot" style="background:#4ade80"></span>Green</td><td>More than 3 days away</td></tr>
+  <tr><td><span class="dot" style="background:#fbbf24"></span>Amber</td><td>3 days or less</td></tr>
+  <tr><td><span class="dot" style="background:#f87171"></span>Red</td><td>24 hours or less</td></tr>
+</table>
+
+<p>The countdown reads <code>3d 4h</code> when there's a day or more left, <code>4h 12m</code> under
+a day, <code>12m</code> under an hour, and <code>due now</code> in the last minute before the
+deadline. It updates once a minute — not once a second, which would drain your battery for a number
+you can't act on any faster.</p>
+
+<h2 id="problems">If something looks wrong</h2>
+
+<p class="q">The menu bar says "duebar · set up"</p>
+<p>No calendar link has been added yet. Click it and the Settings window opens.</p>
+
+<p class="q">Canvas rejected the link (401)</p>
+<p>Feed links change whenever you reset them, and an old one stops working immediately. Copy it again
+from <strong>Calendar → Calendar Feed</strong>.</p>
+
+<p class="q">"That link works, but it isn't a calendar file"</p>
+<p>Almost always the address of the Canvas page you were looking at, rather than the Calendar Feed
+link. Go back to <strong>Calendar → Calendar Feed</strong> and copy the link inside that box.</p>
+
+<p class="q">An assignment is missing</p>
+<p>Four things to check, in order. Is it further away than your look-ahead window? That's
+<strong>Settings → General → Show assignments due within</strong>, and it's 14 days by default.
+Is it already past due? Past-due items are hidden — see below. Does it have a due date in Canvas at
+all? Anything with no due date isn't in the feed, so duebar can't see it.</p>
+
+<p>Finally, open <strong>Settings → Feeds</strong> and look for an orange warning line. If your feed
+contains a due date duebar couldn't make sense of, it says so there and tells you how many. duebar
+hides those rather than showing you a time that might be wrong — but it won't hide the fact that it
+did. If you see that line, email me the feed link and I'll fix the parser.</p>
+
+<p class="q">Something I already turned in is still showing</p>
+<p>A calendar feed can't tell duebar whether you submitted anything — Canvas doesn't put that in the
+feed. So duebar hides items once they're past due rather than pretending to know. If you'd rather see
+them for a day afterwards, there's a switch in <strong>Settings → General</strong>.</p>
+
+<p class="q">It says "Updated 2d ago" with a warning</p>
+<p>duebar hasn't managed to reach your feed for over a day, so what you're looking at is saved from
+last time. Check your internet, then check the link is still valid. It says this rather than quietly
+showing you old numbers as if they were fresh.</p>
+
+<p class="q">Nothing appears in the menu bar at all</p>
+<p>Your menu bar may be full — that happens easily on a laptop with a notch. Quit some other menu bar
+apps, or if you use a menu bar manager like Bartender or Ice, check duebar isn't hidden in it.</p>
+
+<p class="q">Notifications aren't arriving</p>
+<p>Turn them on in <strong>Settings → Notifications</strong> — they're off until you ask for them, and
+macOS asks permission at that point. If you said no by accident, re-allow duebar in
+<strong>System Settings → Notifications</strong>.</p>
+
+<h2 id="privacy">Privacy</h2>
+
+<p>duebar makes exactly two kinds of network request: to the calendar links you pasted, and to check
+for a new version when you click that button. Nothing else, ever.</p>
+
+<p>There is no account, no sign-in, no analytics, no crash reporting and no licence check. Your
+assignments are stored on your Mac only. Your feed link is in the Keychain. The app is sandboxed and
+can't read anything else on your computer.</p>
+
+<h2 id="requirements">Requirements</h2>
+
+<p>macOS 14 Sonoma or later, on Apple Silicon or Intel.</p>
+
+<footer>
+  <p>Still stuck? <a href="mailto:REPLACE-WITH-YOUR-EMAIL">Email me</a> and I'll help.</p>
+</footer>
+
+</div>
+</body>
+</html>
