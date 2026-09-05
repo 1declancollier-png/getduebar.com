@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>duebar — Terms</title>
+<meta name="description" content="The terms of use and licence for duebar.">
+<meta name="theme-color" content="#0c0b0a">
+<link rel="icon" href="../icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  :root { --bg:#0c0b0a; --fg:#f3efe7; --fg-70:rgba(243,239,231,.72); --fg-45:rgba(243,239,231,.45); --line:rgba(243,239,231,.12); --card:rgba(243,239,231,.06);
+    --warn-bg:rgba(251,191,36,.08); --warn-fg:#fbd784; --warn-rule:rgba(251,191,36,.35); --pad:clamp(20px,4vw,56px); }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font-family:"Bricolage Grotesque","Helvetica Neue",Helvetica,Arial,sans-serif; font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  a { color:var(--fg); text-decoration:underline; text-decoration-color:rgba(243,239,231,.35); text-underline-offset:3px; } a:hover { color:#fff; text-decoration-color:#fff; }
+  .mono { font-family:"JetBrains Mono","SF Mono",Menlo,monospace; }
+  nav { display:flex; align-items:center; justify-content:space-between; padding:28px var(--pad) 0; max-width:1440px; margin:0 auto; }
+  .brand { display:flex; align-items:center; gap:12px; font-weight:700; font-size:19px; letter-spacing:-0.02em; text-decoration:none; }
+  .brand img { width:28px; height:28px; border-radius:7px; display:block; }
+  nav .links { display:flex; align-items:center; gap:28px; }
+  nav .links a { font-size:15px; color:var(--fg-70); text-decoration:none; }
+  nav .links a.pill { display:inline-flex; align-items:center; height:40px; padding:0 18px; border-radius:999px; border:1px solid rgba(243,239,231,.25); font-size:14px; font-weight:600; color:var(--fg); }
+  nav .links a.pill:hover { border-color:rgba(243,239,231,.6); }
+  .hero { max-width:760px; margin:0 auto; padding:clamp(56px,8vw,110px) var(--pad) 0; }
+  .eyebrow { font-family:"JetBrains Mono",Menlo,monospace; font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--fg-45); }
+  h1 { margin:18px 0 0; font-size:clamp(40px,6vw,76px); line-height:.98; font-weight:500; letter-spacing:-0.04em; text-wrap:balance; }
+  .hero p { margin:20px 0 0; font-size:20px; color:var(--fg-70); max-width:540px; text-wrap:pretty; }
+  .toc { display:flex; flex-wrap:wrap; gap:10px; margin-top:32px; }
+  .toc a { font-size:14px; text-decoration:none; padding:8px 14px; border-radius:999px; border:1px solid rgba(243,239,231,.18); color:var(--fg-70); }
+  .toc a:hover { border-color:rgba(243,239,231,.5); color:#fff; }
+  .wrap { max-width:760px; margin:0 auto; padding:24px var(--pad) 96px; }
+  h2 { font-size:clamp(28px,3.2vw,40px); line-height:1.05; letter-spacing:-0.03em; font-weight:500; margin:72px 0 18px; padding-top:32px; border-top:1px solid var(--line); scroll-margin-top:24px; }
+  h3 { font-size:22px; letter-spacing:-0.02em; font-weight:600; margin:40px 0 10px; }
+  p { color:var(--fg-70); } p strong { color:var(--fg); font-weight:600; } em { color:var(--fg); }
+  ol, ul { padding-left:1.4rem; color:var(--fg-70); } li { margin:.55rem 0; } li strong { color:var(--fg); }
+  code, .url { font-family:"JetBrains Mono",Menlo,monospace; font-size:.85em; background:var(--card); padding:.15em .45em; border-radius:6px; color:var(--fg); }
+  .url { display:block; padding:.9rem 1.1rem; overflow-wrap:anywhere; margin:1rem 0; border:1px solid var(--line); border-radius:12px; }
+  .note { background:var(--warn-bg); color:var(--warn-fg); border:1px solid var(--warn-rule); border-radius:14px; padding:1.1rem 1.3rem; margin:1.6rem 0; }
+  .note strong { color:#fff; }
+  .q { font-weight:600; color:var(--fg); font-size:19px; letter-spacing:-0.015em; margin:2rem 0 .3rem; }
+  .q + p { margin-top:0; }
+  table { border-collapse:collapse; width:100%; margin:1rem 0; }
+  th, td { text-align:left; padding:.75rem .5rem; border-bottom:1px solid var(--line); color:var(--fg-70); }
+  th { font-weight:600; color:var(--fg); font-size:14px; letter-spacing:.04em; text-transform:uppercase; }
+  td:first-child { color:var(--fg); font-weight:500; }
+  .dot { display:inline-block; width:.6em; height:.6em; border-radius:50%; margin-right:.6em; }
+  footer { margin-top:80px; padding-top:28px; border-top:1px solid var(--line); color:var(--fg-45); font-size:15px; }
+  @media (max-width:600px) { nav .links a:not(.pill) { display:none; } }
+</style>
+</head>
+<body>
+<nav>
+  <a class="brand" href="../"><img src="../icon.png" alt=""><span>duebar</span></a>
+  <div class="links">
+    <a href="../#how">How it works</a>
+    <!-- REPLACE with your Whop checkout link -->
+    <a class="pill" href="../#buy">Get it — $4.99</a>
+  </div>
+</nav>
+<div class="hero">
+  <div class="eyebrow">Terms of use</div>
+  <h1>One licence, no warranty, a fair refund.</h1>
+  <p>What you're buying, what we promise, and what we don't. Written to be read.</p>
+  <div class="toc"><a href="#licence">Licence</a><a href="#price">Refunds</a><a href="#warranty">No warranty</a><a href="#liability">Liability</a><a href="#law">Governing law</a></div>
+</div>
+<div class="wrap">
+
+<p class="eyebrow" style="margin-top:0">Effective 5 September 2026</p>
+
+<h2 id="short">The short version</h2>
+<p>You're buying a licence to use duebar on Macs you own. It's a small utility that reads a calendar feed; it might have bugs, and it is not a substitute for checking Canvas. If it doesn't work for you, ask for a refund. That's most of it — the rest is the same idea in more careful words.</p>
+
+<h2 id="agreement">1. The agreement</h2>
+<p>These terms are a contract between you and the developer of duebar ("we", "us"). By buying, downloading or using duebar, or by using getduebar.com, you agree to them. If you don't agree, don't use the app.</p>
+
+<h2 id="licence">2. Your licence</h2>
+<p>When you buy duebar you get a personal, non-exclusive, non-transferable licence to install and use the app on Macs that you own or control, for as long as you like. One purchase is for one person. You may not sell, rent, sublicense, or redistribute the app, or share the download with people who haven't bought it. You may not reverse-engineer, decompile, or modify it, except where the law says we can't stop you.</p>
+<p>The app and everything in it remain our property. "duebar" and the duebar icon are our marks.</p>
+
+<h2 id="price">3. Price, payment and refunds</h2>
+<p>duebar is a one-time purchase, sold through Whop at the price shown at checkout. Whop processes the payment under its own terms; we don't handle card details. Prices may change in future, but a price change never affects a purchase you've already made.</p>
+<p>If duebar doesn't work for you, email us within <strong>14 days</strong> of purchase and we'll refund you, no questions asked. After that, refunds are at our discretion — but if the app is genuinely broken for you and we can't fix it, we'll refund you regardless of the date.</p>
+
+<h2 id="updates">4. Updates</h2>
+<p>We may release updates that fix bugs or add features. Updates to the version you bought are free. We don't promise any particular update, feature, or timeline, and we may stop developing the app at any time; your licence to the version you have continues regardless.</p>
+
+<h2 id="thirdparty">5. Canvas, Google and your school</h2>
+<p>duebar reads calendar feeds published by Canvas (Instructure), Google Calendar, or any other iCalendar source you point it at. We don't control those services. If your school changes, restricts, or removes calendar feeds, duebar may stop working with that source, and that isn't something we can fix or refund beyond section 3.</p>
+<p>duebar is an independent product and is not affiliated with, endorsed by, or sponsored by Instructure, Google, Apple, or any school. Canvas, Google Calendar, macOS and other names are trademarks of their owners.</p>
+
+<h2 id="use">6. Acceptable use</h2>
+<p>Use the app only with calendar feeds you're entitled to access. Don't use it to access anyone else's feed without their permission, and don't use it in any way that breaks the law or your school's policies.</p>
+
+<h2 id="warranty">7. No warranty</h2>
+<p>duebar is provided "as is" and "as available". To the fullest extent the law allows, we disclaim all warranties, express or implied, including fitness for a particular purpose and non-infringement. In plain terms: <strong>duebar is a convenience, not a source of truth.</strong> Feeds can be stale, schools can change due dates without updating the feed, and software has bugs. You are responsible for checking Canvas (or your school's official source) for your actual deadlines. We are not responsible for a missed assignment, a late submission, or any grade.</p>
+
+<h2 id="liability">8. Limitation of liability</h2>
+<p>To the fullest extent the law allows, we are not liable for any indirect, incidental, special, consequential or punitive damages, or for any loss of data, grades, opportunity, or profits, arising from your use of (or inability to use) duebar or this website. Our total liability to you for anything arising out of these terms or the app is limited to the amount you paid for duebar.</p>
+<p>Some jurisdictions don't allow some of these limitations, so some of them may not apply to you. Nothing in these terms limits liability that can't legally be limited.</p>
+
+<h2 id="termination">9. Ending the agreement</h2>
+<p>You can stop using duebar at any time by deleting it. If you seriously breach these terms (for example, by redistributing the app), we may terminate your licence, in which case you must delete all copies. Sections 7, 8, 10 and 11 survive termination.</p>
+
+<h2 id="changes">10. Changes to these terms</h2>
+<p>We may update these terms from time to time. The current version, with its effective date, will always be at getduebar.com/terms. Changes apply going forward and never take away a licence you've already paid for.</p>
+
+<h2 id="law">11. Governing law</h2>
+<p>These terms are governed by the laws of the State of North Carolina, United States, without regard to conflict-of-law rules. Any dispute will be heard in the state or federal courts located in North Carolina, and you consent to their jurisdiction — except that either of us may bring a claim in small-claims court where it qualifies, and nothing here removes protections you have as a consumer under the law where you live.</p>
+
+<h2 id="misc">12. Everything else</h2>
+<p>These terms, together with the <a href="../privacy/">privacy policy</a>, are the whole agreement between us about duebar. If any part of them is found unenforceable, the rest still applies. If we don't enforce a term right away, we can still enforce it later.</p>
+
+<h2 id="contact">Contact</h2>
+<p><a href="mailto:REPLACE-WITH-YOUR-EMAIL">REPLACE-WITH-YOUR-EMAIL</a></p>
+
+<footer>
+  <p><a href="../">duebar</a> · <a href="../help/">Help</a> · <a href="../privacy/">Privacy</a> · <a href="../terms/">Terms</a> · <a href="mailto:REPLACE-WITH-YOUR-EMAIL">Contact</a></p>
+</footer>
+</div>
+</body>
+</html>
