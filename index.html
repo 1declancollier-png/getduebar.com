@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>duebar — your next assignment, in the menu bar</title>
+<meta name="description" content="A tiny Mac menu bar app that shows your next Canvas assignment and a live countdown to it. $4.99, one purchase, no account.">
+<meta property="og:title" content="duebar">
+<meta property="og:description" content="Your next assignment, and how long you have left — in the menu bar.">
+<meta property="og:type" content="website">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff; --fg: #1d1d1f; --muted: #6e6e73; --rule: #e3e3e6;
+    --card: #f5f5f7; --accent: #0b64d6; --accent-fg: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131315; --fg: #f2f2f4; --muted: #9a9aa0; --rule: #303035;
+      --card: #1e1e21; --accent: #4d97ff; --accent-fg: #0a0a0b;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 52rem; margin: 0 auto; padding: 0 1.5rem; }
+  a { color: var(--accent); }
+
+  /* Hero */
+  .hero { text-align: center; padding: 5rem 0 3.5rem; }
+  .hero img.icon { width: 96px; height: 96px; border-radius: 22px; }
+  h1 { font-size: clamp(2.4rem, 6vw, 3.4rem); letter-spacing: -0.03em; margin: 1.5rem 0 .5rem; }
+  .tagline { font-size: clamp(1.1rem, 2.6vw, 1.35rem); color: var(--muted); margin: 0 auto 2rem; max-width: 30rem; }
+  .shot-menubar {
+    display: inline-block; max-width: 100%; height: auto;
+    border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.12);
+  }
+  .buy {
+    display: inline-block; margin-top: 2.5rem;
+    background: var(--accent); color: var(--accent-fg);
+    text-decoration: none; font-weight: 600;
+    padding: .85rem 2rem; border-radius: 980px;
+  }
+  .price-note { color: var(--muted); font-size: .95rem; margin-top: .85rem; }
+
+  /* Panels */
+  .shots {
+    display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;
+    padding: 2rem 0 4rem;
+  }
+  .shots img {
+    width: 320px; max-width: 100%; height: auto;
+    border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,.16);
+  }
+
+  section { padding: 3.5rem 0; border-top: 1px solid var(--rule); }
+  h2 { font-size: 1.6rem; letter-spacing: -0.02em; margin: 0 0 1rem; }
+  .lede { color: var(--muted); max-width: 34rem; }
+
+  .grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); margin-top: 2rem; }
+  .card { background: var(--card); border-radius: 14px; padding: 1.4rem 1.5rem; }
+  .card h3 { margin: 0 0 .4rem; font-size: 1.02rem; }
+  .card p { margin: 0; color: var(--muted); font-size: .95rem; }
+
+  ul.plain { list-style: none; padding: 0; }
+  ul.plain li { padding: .55rem 0 .55rem 1.75rem; position: relative; color: var(--muted); }
+  ul.plain li::before { content: "—"; position: absolute; left: 0; color: var(--fg); }
+
+  footer {
+    border-top: 1px solid var(--rule); padding: 2.5rem 0 4rem;
+    color: var(--muted); font-size: .9rem;
+    display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: space-between;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="hero">
+    <img class="icon" src="icon.png" alt="">
+    <h1>duebar</h1>
+    <p class="tagline">Your next assignment, and how long you have left — in the menu bar.</p>
+    <img class="shot-menubar" src="menubar.png" alt="The duebar menu bar item reading: Chem Lab 3: Titration · 4h 12m" width="221">
+    <div>
+      <!-- REPLACE with your Whop checkout link -->
+      <a class="buy" href="#">Get duebar — $4.99</a>
+      <p class="price-note">One purchase. No subscription, no account, no licence key.</p>
+    </div>
+  </div>
+
+  <div class="shots">
+    <img src="panel-light.png" alt="The duebar panel listing five upcoming assignments">
+    <img src="panel-dark.png" alt="The same panel in dark mode">
+  </div>
+
+  <section>
+    <h2>It does one thing</h2>
+    <p class="lede">Click the menu bar and you get the next few things you owe, colour-coded by how
+    soon they are. One click opens any of them in Canvas. That's the whole app.</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>No login</h3>
+        <p>It reads the calendar feed Canvas already gives you. Nothing to sign into, no permission
+        needed from your school.</p>
+      </div>
+      <div class="card">
+        <h3>Works offline</h3>
+        <p>Keeps the last list it downloaded and tells you how old it is, instead of going blank on
+        the train.</p>
+      </div>
+      <div class="card">
+        <h3>Never guesses</h3>
+        <p>If it can't work out exactly when something is due, it doesn't show it. A wrong deadline
+        is worse than no deadline.</p>
+      </div>
+      <div class="card">
+        <h3>Invisible until it matters</h3>
+        <p>No Dock icon, no window, one wake-up a minute. Measured at 0.0% CPU and 13 MB.</p>
+      </div>
+      <div class="card">
+        <h3>Google Classroom too</h3>
+        <p>Any iCal link works. Add several and they merge into one list, with duplicates removed.</p>
+      </div>
+      <div class="card">
+        <h3>Reminders, if you want them</h3>
+        <p>24 hours, 3 hours or 1 hour before. Off by default — it never asks unless you turn them on.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What it doesn't do</h2>
+    <p class="lede">On purpose.</p>
+    <ul class="plain">
+      <li>No account, no sign-up, no email address</li>
+      <li>No analytics, no tracking, no crash reporting</li>
+      <li>No subscription and no licence key to lose</li>
+      <li>No planner, no to-do list, no AI assistant</li>
+    </ul>
+    <p style="margin-top:1.5rem">The only network requests it ever makes are to your own calendar
+    link, and to check for a new version when you press the button.</p>
+  </section>
+
+  <section>
+    <h2>Getting started</h2>
+    <p class="lede">Copy one link out of Canvas and paste it in. It takes about a minute —
+    <a href="help/">step-by-step instructions here</a>.</p>
+    <p style="margin-top:1.5rem">Needs macOS 14 Sonoma or later. Runs natively on Apple Silicon and
+    Intel.</p>
+  </section>
+
+  <footer>
+    <span>duebar</span>
+    <span>
+      <a href="help/">Help</a> &nbsp;·&nbsp;
+      <!-- REPLACE with your contact address -->
+      <a href="mailto:REPLACE-WITH-YOUR-EMAIL">Contact</a>
+    </span>
+  </footer>
+
+</div>
+</body>
+</html>

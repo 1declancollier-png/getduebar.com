@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "url": "https://getduebar.com/downloads/duebar-1.0.0.dmg",
+  "notes": "\u2022 First release.\n\u2022 Menu bar item showing the next assignment and a live countdown, colour-coded by urgency, updating once a minute.\n\u2022 Panel listing the next ten assignments with one-click open in Canvas.\n\u2022 Settings window: feeds, refresh interval, look-ahead window, notifications with 24 h / 3 h / 1 h lead times, past-due grace period, open at login.\n\u2022 Hand-written RFC 5545 parser with no dependencies; handles Canvas and Google Calendar feeds, byte-level line unfolding, time zones and all-day due dates.\n\u2022 Offline support: the last successful fetch is cached and shown with its age.",
+  "sha256": "e7e2baee4ecf1a6135f5c0d592c1d6d2714a2fd7b52d24ad5f8a57fe37786615"
+}
